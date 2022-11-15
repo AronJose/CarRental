@@ -1,0 +1,55 @@
+<div class="col-md-8">
+    <table  class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Car Name</th>
+                <th>Car Model</th>
+                <th>Register Number</th>
+                <th>Fuel Type</th>
+                <th>Colour</th>
+                <th>Rate</th>
+                <th>Kilometer</th>
+                
+               
+<th></th>
+<th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of carList;let i=index">
+                <td>
+                    {{i+1}}
+                </td>
+                <td>
+                    {{item.carname}}
+                </td>
+                <td>
+                    {{item.carmodel}}
+                </td>
+                <td>
+                    {{item.registerNo}}
+                </td>
+                <td>
+                    {{item.fueltype}}
+                </td>
+                <td>
+                    {{item.colour}}
+                </td>
+                <td>
+                    {{item.rate}}
+                </td>
+                <td>
+                    {{item.kilometer}}
+                </td>
+                <td>
+                    <button class="btn btn-primary counter" type="button" (click)="editcar(item)">Edit</button>
+                </td>
+                <td>
+                    <button class="btn btn-primary" type="button" (click)="removecar(item)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div> 
+
